@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 95%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.container{
+    max-width: 800px;
+    
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    
+    
+    
+}
+.container .card:nth-child(1){
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.container .card:nth-child(2){
+    background-color: hsl(184, 100%, 22%);
+}
+.container .card:nth-child(3){
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.card{
+    flex: calc(100%/3);
+    padding: 35px;
+    
+    max-width: calc(800px/3);
+    min-height: 400px;
+}
+@media screen and (max-width: 767px) {
+    
+    .container{
+        flex-direction: column;
+
+    }
+    .container .card:nth-child(3){
+        background-color: hsl(179, 100%, 13%);
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        margin-bottom: 60px;
+    }
+    .container .card:nth-child(1){
+        
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 0px;
+        margin-top: 60px;
+    }
+}
+.card h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: hsl(0, 0%, 95%);
+    padding: 20px 0;
+}
+.card p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+    font-size: 14px;
+    
+}
+
+.card button{
+    margin-top: 55px;
+    width: 130px;
+    height: 40px;
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.container .card:nth-child(1) button{
+    color: hsl(31, 77%, 52%);
+    
+}
+.container .card:nth-child(2) button{
+    color: hsl(184, 100%, 22%);
+}
+.container .card:nth-child(3) button{
+    color: hsl(179, 100%, 13%);
+}
+.container .card:nth-child(1) button:hover{
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+.container .card:nth-child(2) button:hover{
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+.container .card:nth-child(3) button:hover{
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
